@@ -1,0 +1,4 @@
+It seems like the process is:
+
+fit data using first fold
+predict on the rest of the folds
