@@ -1,8 +1,11 @@
 """
 CREATED BY: NATHAN WHITE
 """
+import sys
 
 f = open('house-votes-84.data.txt', 'r')
+temp = sys.stdout
+sys.stdout = open('itemset.txt', 'w')
 lines = f.readlines()
 for line in lines:
     strpline = line.rstrip()
@@ -15,4 +18,6 @@ for line in lines:
         newline.append(100)
     else:
         newline.append(200)
-    print(newline, sep=',')
+    print(*newline, sep=',')
+sys.stdout.close()
+sys.stdout = temp
