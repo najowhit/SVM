@@ -7,7 +7,7 @@ from sklearn import svm
 
 raw_data = numpy.genfromtxt('house-votes-84.data.txt', delimiter=",", dtype=str)
 
-#numpy.random.shuffle(raw_data)
+numpy.random.shuffle(raw_data)
 labels = raw_data[:, 0]
 data = raw_data[:, 1:]
 
